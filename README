@@ -1,1 +1,3 @@
-//
+Memorails is a picture gallery based on Ruby on Rails and using google appengine for storing images.
+This is Client side of application
+If you want to see code of Memorails storage, [[click here|http://code.google.com/p/memorails/]]
