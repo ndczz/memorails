@@ -1,0 +1,40 @@
+<!DOCTYPE htmlPUBLIC "-//W3C//DTDXHTML1.0Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Memorails hosting</title>
+<%=stylesheet_link_tag "memorails",:media=> "all" %>
+</head>
+  <body id="store">
+
+    <div id="banner">
+      <%=  image_tag("memorails.jpg")%>
+      
+      <div id="banner_text"> Just hosting it...</div>
+
+    
+      <div id="search_line">
+        <input id="search" type="text" name="serch"/>
+        <%=button_to "Search",:action=>:search%>
+        <%=button_to "Advanced Search",:action=>:advanced_search%>
+      </div>
+    </div>
+
+    <div id="columns">
+
+      <div id="side">
+        <div id="categories">
+          <%=render(:partial=> "categories",:object=>@categories)%>
+        </div>
+      </div>
+
+      <div id="east">
+        <a href="http://www....">Home</a><br/>
+      </div>
+
+      <div id="main">
+        <%=yield:layout%>
+      </div>
+    </div>
+  </body>
+</html>

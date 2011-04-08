@@ -1,0 +1,63 @@
+<h1>New pictures</h1>
+
+<table>
+  <tr>
+    <%  line_count = 0 %>
+    <%  for picture in @new_pics-%>
+
+    <%  line_count = line_count + 1
+
+        if (line_count - 1) % 5 == 0
+          %><tr>
+    <%  end %>
+
+    <td>
+      <div id="picture">
+        <%= link_to image_tag(picture.url), :action => 'show_picture', :id => picture %>
+        <br>
+        <%=h picture.name%> <br>
+        <%=picture.rating%>
+      </div>
+    </td>
+
+    <%  if line_count % 5 == 0
+          %></tr>
+    <%  end %>
+
+    <%end%>
+  </tr>
+</table>
+
+
+
+<h1>Most Popular Pictures</h1>
+
+<table>
+  <tr>
+    <%  line_count = 0 %>
+    <%  for picture in @most_popular_pics-%>
+
+    <%  line_count = line_count + 1
+
+        if (line_count - 1) % 5 == 0
+          %><tr>
+    <%  end %>
+
+    <td>
+      <div id="picture">
+        <%= link_to image_tag(picture.url), :action => 'show_picture', :id => picture %>
+        <br>
+        <%=h picture.name%> <br>
+        <%=picture.rating%>
+      </div>
+    </td>
+  
+    <%  if line_count % 5 == 0
+          %></tr>
+    <%  end %>
+
+    <%end%>
+  </tr>
+</table>
+
+

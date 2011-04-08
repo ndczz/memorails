@@ -1,0 +1,5 @@
+<div id="categories">Categories</div>
+
+<%for item in categories %>
+  <%=link_to item.name, :action => :show_category, :id => item%><br>
+<%end%>
