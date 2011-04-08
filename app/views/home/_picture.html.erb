@@ -1,0 +1,25 @@
+<td>
+      <div id="picture">
+        <%
+        image_width = 150
+        image_height = 100
+          w = 0
+          h = 0
+          if picture.width > picture.height
+              w = image_width
+              h = w * picture.height / picture.width
+          else
+              h = image_height
+              w = h * picture.width / picture.height
+          end
+          image_size = w.to_s() + "x" + h.to_s()
+        %>
+        <%= link_to image_tag(picture.url, :size => image_size), :action => 'show_picture', :id => picture %>
+        <br>
+        <%=h picture.name%> <br>
+        <%
+          rating = "rating_" + picture.rating.to_s() + ".jpg";
+        %>
+        <%= image_tag(rating) %>
+      </div>
+    </td>
