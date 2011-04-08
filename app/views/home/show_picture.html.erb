@@ -1,9 +1,46 @@
 <h1><%= @picture.name %></h1>
 
-<p>
-  Rating: <%= @picture.rating %>
-  Shows: <%= @picture.show_count %>
-</p>
+<%
+  r = @picture.rating.to_i()
+  rating = "rating_" + r.to_s() + ".jpg";
+  size = @picture.width.to_s() + " x " + @picture.height.to_s()
+  rating_str = "(" + @picture.rating.to_s() + ")"
+%>
+
+<table id="picture_info">
+
+  <tr>
+    <td>Рейтинг:</td>
+    <td><%= image_tag(rating) %>
+      <font size="3px"><%= rating_str %></font></td>
+    <td rowspan=3>
+      Оценить
+      <%= link_to image_tag("star_1gr.png", :border => "0", :onmouseover => "this.src='/images/star_1.png'", :onmouseout => "this.src='/images/star_1gr.png'"), :action => 'add_rating', :id => @picture, :r => 1 %>
+      <%= link_to image_tag("star_2gr.png", :border => "0", :onmouseover => "this.src='/images/star_2.png'", :onmouseout => "this.src='/images/star_2gr.png'"), :action => 'add_rating', :id => @picture, :r => 2 %>
+      <%= link_to image_tag("star_3gr.png", :border => "0", :onmouseover => "this.src='/images/star_3.png'", :onmouseout => "this.src='/images/star_3gr.png'"), :action => 'add_rating', :id => @picture, :r => 3 %>
+      <%= link_to image_tag("star_4gr.png", :border => "0", :onmouseover => "this.src='/images/star_4.png'", :onmouseout => "this.src='/images/star_4gr.png'"), :action => 'add_rating', :id => @picture, :r => 4 %>
+      <%= link_to image_tag("star_5gr.png", :border => "0", :onmouseover => "this.src='/images/star_5.png'", :onmouseout => "this.src='/images/star_5gr.png'"), :action => 'add_rating', :id => @picture, :r => 5 %>
+    </td>
+  </tr>
+  <tr>
+    <td>Просмотров:</td>
+    <td><%= @picture.show_count %></td>
+  </tr>
+  <tr>
+    <td>Размер:</td>
+    <td><%= size %></td>
+  </tr>
+  <tr>
+    <td>Метки:</td>
+    <td colspan="2">
+      <% for tag in @tags-%>
+      <%= tag.name %>;
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+
 <div id="picture">
         <%= image_tag(@picture.url) %>
 </div>

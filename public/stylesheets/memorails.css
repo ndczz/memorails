@@ -25,6 +25,7 @@ padding-top:4ex;
 padding-left:2em;
 background:white;
 }
+
 #side{
 float:left;
 padding-top:1em;
@@ -67,6 +68,12 @@ padding-top:10px;
 padding-bottom:10px;
 font: 16px arial, sans-serif;
 text-align:center;
+}
+
+#picture_info{
+width: 70%;
+font: 18px arial, sans-serif;
+text-align:left;
 }
 
 #categories{

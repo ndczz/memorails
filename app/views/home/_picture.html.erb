@@ -18,7 +18,8 @@
         <br>
         <%=h picture.name%> <br>
         <%
-          rating = "rating_" + picture.rating.to_s() + ".jpg";
+          r = picture.rating.to_i()
+          rating = "rating_" + r.to_s() + ".jpg";
         %>
         <%= image_tag(rating) %>
       </div>
