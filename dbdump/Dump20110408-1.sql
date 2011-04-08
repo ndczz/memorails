@@ -65,13 +65,16 @@ CREATE TABLE `pictures` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `category_id` int(10) DEFAULT NULL,
+  `show_count` int(10) DEFAULT NULL,
+  `width` int(10) DEFAULT NULL,
+  `height` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `picture_users` (`user_id`),
   KEY `picture_categories` (`category_id`),
   KEY `picture_category` (`category_id`),
   CONSTRAINT `picture_category` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `picture_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -80,7 +83,7 @@ CREATE TABLE `pictures` (
 
 LOCK TABLES `pictures` WRITE;
 /*!40000 ALTER TABLE `pictures` DISABLE KEYS */;
-INSERT INTO `pictures` VALUES (1,'cow','http://img.brothersoft.com/games/flash/icon/b/blithe-cow-coloring-52184-1286520546.jpg',9,1,NULL,NULL,1),(2,'cat','http://www.californiaearthminerals.com/graphics/cat.gif',7,1,NULL,NULL,1),(3,'car','http://www.qvts.com/images/CarHireClio.jpg',8,1,NULL,NULL,2),(4,'football','http://www.coachteed.com/images/links.png',9,1,NULL,NULL,3),(5,'bear','http://www.hollywoodgames.net/files/image/polar-bear.jpg',7,1,NULL,NULL,1),(6,'peugeot','http://image2.paultan.org/image/peugeot-207-compact-3-100x100.jpg',8,1,NULL,NULL,2),(7,'snake','http://www.motivationalz.com/120s/001.jpg',9,1,NULL,NULL,1),(8,'house','http://www.besthousedesign.com/wp-content/uploads/2008/11/dra_family_house_image.jpg',3,1,NULL,NULL,3),(9,'plane','http://www.freeplaynow.com:8080/park-my-plane-game.jpg',3,1,NULL,NULL,3),(10,'girl','http://files.rainbowdressup.com/games/flower-girl.jpg',4,1,NULL,NULL,3),(11,'dog','http://jackandhill.typepad.com/jack_and_hill_a_beauty_bl/images/target_dog.jpg',6,1,NULL,NULL,1),(12,'rihanna','http://www.lesavatars.com/Smile/Rihanna/rihanna103.jpg',9,1,NULL,NULL,3);
+INSERT INTO `pictures` VALUES (1,'cow','http://img.brothersoft.com/games/flash/icon/b/blithe-cow-coloring-52184-1286520546.jpg',9,1,NULL,'2011-04-08 09:54:12',1,3,100,100),(2,'cat','http://www.californiaearthminerals.com/graphics/cat.gif',7,1,NULL,NULL,1,0,100,100),(3,'car','http://www.qvts.com/images/CarHireClio.jpg',8,1,NULL,'2011-04-08 09:55:11',2,1,100,100),(4,'football','http://www.coachteed.com/images/links.png',9,1,NULL,NULL,3,0,100,100),(5,'bear','http://www.hollywoodgames.net/files/image/polar-bear.jpg',7,1,NULL,NULL,1,0,100,100),(6,'peugeot','http://www.tvoypeugeot.ru/admin/modules/html/files/html695/peugeot_307cc_paris_01.jpg',8,1,NULL,'2011-04-08 10:25:18',2,1,800,537),(7,'snake','http://www.motivationalz.com/120s/001.jpg',9,1,NULL,NULL,1,0,100,100),(8,'house','http://www.besthousedesign.com/wp-content/uploads/2008/11/dra_family_house_image.jpg',3,1,NULL,NULL,3,0,100,100),(9,'plane','http://www.freeplaynow.com:8080/park-my-plane-game.jpg',3,1,NULL,NULL,3,0,100,100),(10,'girl','http://files.rainbowdressup.com/games/flower-girl.jpg',4,1,NULL,NULL,3,0,100,100),(11,'dog','http://jackandhill.typepad.com/jack_and_hill_a_beauty_bl/images/target_dog.jpg',6,1,NULL,NULL,1,0,100,100),(12,'rihanna','http://www.lesavatars.com/Smile/Rihanna/rihanna103.jpg',9,1,NULL,NULL,3,0,100,100),(13,'Porsche 911','http://chevroletik.com/wp-content/uploads/2010/06/2010-porsche-911-turbo-580.jpg',10,1,NULL,'2011-04-08 10:27:37',2,6,585,388);
 /*!40000 ALTER TABLE `pictures` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -103,7 +106,7 @@ CREATE TABLE `schema_migrations` (
 
 LOCK TABLES `schema_migrations` WRITE;
 /*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
-INSERT INTO `schema_migrations` VALUES ('20110407142441'),('20110407143055'),('20110407184840'),('20110407185233');
+INSERT INTO `schema_migrations` VALUES ('20110407142441'),('20110407143055'),('20110407184840'),('20110407185233'),('20110408094604'),('20110408100202');
 /*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,4 +147,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-04-08 12:43:35
+-- Dump completed on 2011-04-08 14:32:31

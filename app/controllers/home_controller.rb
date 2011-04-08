@@ -14,6 +14,8 @@ class HomeController < ApplicationController
 
   def show_picture
     @picture = Picture.find(params[:id])
+    show_count = @picture.show_count + 1
+    @picture.update_attribute("show_count", show_count)
     @categories = Category.find_all_categories
   end
 end

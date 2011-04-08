@@ -1,5 +1,11 @@
 <h1>New pictures</h1>
 
+<%
+  image_width = 150
+  image_height = 100
+  image_count_per_line = 5
+%>
+
 <table>
   <tr>
     <%  line_count = 0 %>
@@ -7,20 +13,33 @@
 
     <%  line_count = line_count + 1
 
-        if (line_count - 1) % 5 == 0
+        if (line_count - 1) % image_count_per_line == 0
           %><tr>
     <%  end %>
 
     <td>
       <div id="picture">
-        <%= link_to image_tag(picture.url), :action => 'show_picture', :id => picture %>
+
+        <%
+        w = 0
+        h = 0
+        if picture.width > picture.height
+            w = image_width
+            h = w * picture.height / picture.width
+        else
+            h = image_height
+            w = h * picture.width / picture.height
+        end
+        image_size = w.to_s() + "x" + h.to_s()
+        %>
+        <%= link_to image_tag(picture.url, :size => image_size), :action => 'show_picture', :id => picture %>
         <br>
         <%=h picture.name%> <br>
-        <%=picture.rating%>
+        <%=picture.rating%> Show: <%=picture.show_count%>
       </div>
     </td>
 
-    <%  if line_count % 5 == 0
+    <%  if line_count % image_count_per_line == 0
           %></tr>
     <%  end %>
 
@@ -39,20 +58,32 @@
 
     <%  line_count = line_count + 1
 
-        if (line_count - 1) % 5 == 0
+        if (line_count - 1) % image_count_per_line == 0
           %><tr>
     <%  end %>
 
     <td>
       <div id="picture">
-        <%= link_to image_tag(picture.url), :action => 'show_picture', :id => picture %>
+        <%
+          w = 0
+          h = 0
+          if picture.width > picture.height
+              w = image_width
+              h = w * picture.height / picture.width
+          else
+              h = image_height
+              w = h * picture.width / picture.height
+          end
+          image_size = w.to_s() + "x" + h.to_s()
+        %>
+        <%= link_to image_tag(picture.url, :size => image_size), :action => 'show_picture', :id => picture %>
         <br>
         <%=h picture.name%> <br>
         <%=picture.rating%>
       </div>
     </td>
   
-    <%  if line_count % 5 == 0
+    <%  if line_count % image_count_per_line == 0
           %></tr>
     <%  end %>
 
