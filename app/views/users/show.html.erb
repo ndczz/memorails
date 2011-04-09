@@ -1,24 +1,33 @@
-
-<% if !session[:user_id].nil? %>
 <p>
-  <b>Login:</b>
+  <b>Name:</b>
   <%=h @user.login %>
-</p>
-
-<p>
-  <b>Password:</b>
-  <%=h @user.password %>
 </p>
 
 <p>
   <b>Email:</b>
   <%=h @user.email %>
 </p>
-<%else%>
-<% if User.find_all_by %>
+<p>
+  <b>Registered:</b>
+  <%=h @user.created_at %>
+</p>
+<p>
+  <b>Uploaded images</b>
+</p>
+<%@user.pictures.each { |pic|%>
+<ul>
+  <%=link_to pic.name, :controller =>'home', :action=> 'show_picture', :id =>pic.id%>
+  <br>
+  <%= image_tag(pic.url, :size=>"30x30" )   %>
+  </br>
+</ul>
 
+<%}%>
+
+<%if @self_profile%>
+<%= link_to 'Edit profile', edit_user_path(@user) %> |
+<%= link_to 'Manage pictures', :controller => "home" %> |
+<%= link_to "Выйти", :controller => 'auth',  :action => 'logout' %> |
 <%end%>
 
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

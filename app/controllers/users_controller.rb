@@ -14,7 +14,11 @@ class UsersController < ApplicationController
   # GET /users/1.xml
   def show
     @user = User.find(params[:id])
-
+    if session[:user_id]==@user.id
+      @self_profile = true
+    else
+      @self_profile = false
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @user }
@@ -35,6 +39,15 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+    if session[:user_id]==@user.id
+      @self_profile = true
+    else
+      @self_profile = false
+    end
+    if !@self_profile
+      flash[:notice]="You can't edit this profile!"
+      redirect_to(:action =>"show", :id=> params[:id])
+    end
   end
 
   # POST /users
