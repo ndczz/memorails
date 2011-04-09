@@ -1,0 +1,26 @@
+<h1>Результаты поиска</h1>
+
+<%
+  image_count_per_line = 5
+%>
+
+<table>
+  <tr>
+    <%  line_count = 0 %>
+    <%  for picture in @pictures-%>
+
+    <%  line_count = line_count + 1
+
+        if (line_count - 1) % image_count_per_line == 0
+          %><tr>
+    <%  end %>
+
+    <%=render(:partial=> "picture",:locals => {:picture => picture})%>
+
+    <%  if line_count % image_count_per_line == 0
+          %></tr>
+    <%  end %>
+
+    <%end%>
+  </tr>
+</table>

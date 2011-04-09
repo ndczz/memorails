@@ -10468,3 +10468,2336 @@ Rendering template within layouts/show_picture_layout
 Rendering home/show_picture
   [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
 Completed in 208ms (View: 75, DB: 4) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 21:51:46) [GET]
+  Parameters: {"r"=>"4", "id"=>"13"}
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (12.0ms)[0m   [0mUPDATE `pictures` SET `rating` = '4.66', `updated_at` = '2011-04-08 17:51:47' WHERE `id` = 13[0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 3, `updated_at` = '2011-04-08 17:51:47' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 262ms (DB: 14) | 302 Found [http://localhost/home/add_rating/13?r=4]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 21:51:47) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (26.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 75, `updated_at` = '2011-04-08 17:51:47' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (2.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 736ms (View: 325, DB: 30) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 21:54:52) [GET]
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (52.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (7.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (81.0ms)
+Completed in 262ms (View: 229, DB: 5) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 21:55:32) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 6) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 56, `updated_at` = '2011-04-08 17:55:32' WHERE `id` = 6[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 6 ) [0m
+Completed in 233ms (View: 115, DB: 4) | 200 OK [http://localhost/home/show_picture/6]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 22:30:27) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 6) [0m
+  [4;35;1mPicture Update (0.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 57, `updated_at` = '2011-04-08 18:30:27' WHERE `id` = 6[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (2.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 6 ) [0m
+Completed in 335ms (View: 91, DB: 7) | 200 OK [http://localhost/home/show_picture/6]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 22:30:34) [GET]
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (30.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (7.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (54.0ms)
+Completed in 196ms (View: 165, DB: 6) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 22:36:13) [GET]
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (29.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (18.0ms)
+Completed in 199ms (View: 143, DB: 5) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 22:36:16) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>""}, "commit"=>"Search"}
+
+ActionView::MissingTemplate (Missing template home/search.erb in view path app/views):
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  script\server:3
+
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 22:42:39) [GET]
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (26.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (1.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_categories (15.0ms)
+Completed in 141ms (View: 109, DB: 5) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 22:42:45) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>"lsdkfjg"}, "commit"=>"Search"}
+Rendering template within layouts/home
+Rendering home/search
+
+ActionView::TemplateError (undefined method `name' for #<SearchInfo:0x1f0d7b0>) on line #19 of app/views/layouts/home.html.erb:
+16:       <div id="search_line">
+17:         <%form_for:search_info, :url=>{:action=>:search}do|form|%>
+18:         
+19:         <%=form.text_field :name, :size => 40%>
+20:         <%=submit_tag "Search",:class=> "submit" %>
+21: 
+22:         <%end%>
+
+    app/views/layouts/home.html.erb:19
+    app/views/layouts/home.html.erb:17
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    script\server:3
+
+Rendered rescues/_trace (181.0ms)
+Rendered rescues/_request_and_response (59.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 22:49:51) [GET]
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (28.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (16.0ms)
+Completed in 136ms (View: 107, DB: 4) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 22:49:56) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>"asdf"}, "commit"=>"Search"}
+Rendering template within layouts/home
+Rendering home/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #3 of app/views/home/_categories.html.erb:
+1: <div id="categories">Categories</div>
+2: 
+3: <%for item in categories %>
+4:   <%=link_to item.name, :action => :show_category, :id => item%><br>
+5: <%end%>
+
+    app/views/home/_categories.html.erb:3
+    app/views/layouts/home.html.erb:30
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    script\server:3
+
+Rendered rescues/_trace (95.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 22:50:37) [GET]
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (25.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (1.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (21.0ms)
+Completed in 144ms (View: 113, DB: 6) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 22:50:41) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>"dima"}, "commit"=>"Search"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+Rendered home/_categories (16.0ms)
+Completed in 50ms (View: 27, DB: 2) | 200 OK [http://localhost/home/search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 22:51:27) [GET]
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (35.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_categories (15.0ms)
+Completed in 148ms (View: 118, DB: 3) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 22:51:31) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>"adfdf"}, "commit"=>"Search"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+Rendered home/_categories (60.0ms)
+Completed in 97ms (View: 78, DB: 1) | 200 OK [http://localhost/home/search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 23:02:29) [GET]
+  [4;36;1mPicture Load (3.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;35;1mPicture Load (3.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (47.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (5.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (5.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (5.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (5.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (5.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_categories (27.0ms)
+Completed in 249ms (View: 199, DB: 7) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-08 23:02:32) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE="}
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (27.0ms)
+Completed in 93ms (View: 61, DB: 5) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-08 23:05:34) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE="}
+  [4;36;1mCategory Load (3.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (17.0ms)
+Completed in 114ms (View: 89, DB: 3) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 23:05:40) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>"dima"}}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #1 of app/views/home/search.html.erb:
+1: <h1><%=@search_info.name%></h1>
+
+    app/views/home/search.html.erb:1
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    script\server:3
+
+Rendered rescues/_trace (73.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 23:10:18) [GET]
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (26.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (1.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (17.0ms)
+Completed in 132ms (View: 104, DB: 2) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-08 23:10:21) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE="}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (24.0ms)
+Completed in 75ms (View: 53, DB: 2) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 23:10:27) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>"dima"}, "commit"=>"Search"}
+
+ArgumentError (wrong # of arguments(1 for 0)):
+  app/controllers/home_controller.rb:38:in `initialize'
+  app/controllers/home_controller.rb:38:in `new'
+  app/controllers/home_controller.rb:38:in `search'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  script\server:3
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 23:11:35) [GET]
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (60.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (16.0ms)
+Completed in 178ms (View: 141, DB: 7) | 200 OK [http://localhost/home/]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-08 23:11:37) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE="}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (20.0ms)
+Completed in 53ms (View: 32, DB: 1) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 23:11:42) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>"dima"}, "commit"=>"Search"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #1 of app/views/home/search.html.erb:
+1: <h1><%=@search_info.name%></h1>
+
+    app/views/home/search.html.erb:1
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    script\server:3
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 23:16:31) [GET]
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (26.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (13.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (1.0ms)
+Rendered home/_categories (15.0ms)
+Completed in 144ms (View: 114, DB: 4) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-08 23:16:34) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE="}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (15.0ms)
+Completed in 166ms (View: 143, DB: 1) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 23:16:38) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>"dima"}, "commit"=>"Search"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+
+ActionView::TemplateError (undefined method `name' for {"name"=>"dima"}:HashWithIndifferentAccess) on line #1 of app/views/home/search.html.erb:
+1: <h1><%=@search_info.name%></h1>
+
+    app/views/home/search.html.erb:1
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    script\server:3
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-08 23:18:24) [GET]
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (26.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (6.0ms)
+Rendered home/_picture (1.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (1.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (15.0ms)
+Completed in 161ms (View: 132, DB: 5) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-08 23:18:26) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE="}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (14.0ms)
+Completed in 43ms (View: 25, DB: 2) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 23:18:29) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>"dima"}, "commit"=>"Search"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+Rendered home/_categories (15.0ms)
+Completed in 96ms (View: 24, DB: 2) | 200 OK [http://localhost/home/search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_category (for 127.0.0.1 at 2011-04-08 23:20:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/show_category
+  [4;35;1mPicture Load (32.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.category_id = 2) [0m
+Rendered home/_picture (27.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_categories (1.0ms)
+Completed in 158ms (View: 82, DB: 34) | 200 OK [http://localhost/home/show_category/2]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:05) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 76, `updated_at` = '2011-04-08 19:20:05' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (62.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 398ms (View: 126, DB: 65) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:16) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating` = '4.74', `updated_at` = '2011-04-08 19:20:16' WHERE `id` = 13[0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 4, `updated_at` = '2011-04-08 19:20:16' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 227ms (DB: 4) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:16) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (0.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 77, `updated_at` = '2011-04-08 19:20:16' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 166ms (View: 46, DB: 5) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:18) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating` = '4.79', `updated_at` = '2011-04-08 19:20:18' WHERE `id` = 13[0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 5, `updated_at` = '2011-04-08 19:20:19' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 133ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:19) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 78, `updated_at` = '2011-04-08 19:20:19' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 192ms (View: 48, DB: 5) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:20) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (0.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (39.0ms)[0m   [0mUPDATE `pictures` SET `rating` = '4.82', `updated_at` = '2011-04-08 19:20:20' WHERE `id` = 13[0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 6, `updated_at` = '2011-04-08 19:20:20' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 177ms (DB: 40) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:20) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (0.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (0.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 79, `updated_at` = '2011-04-08 19:20:20' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 142ms (View: 46, DB: 3) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:21) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `rating` = '4.84', `updated_at` = '2011-04-08 19:20:21' WHERE `id` = 13[0m
+  [4;35;1mPicture Update (2.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 7, `updated_at` = '2011-04-08 19:20:21' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 156ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:21) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 80, `updated_at` = '2011-04-08 19:20:21' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 159ms (View: 39, DB: 3) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:22) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating` = '4.86', `updated_at` = '2011-04-08 19:20:22' WHERE `id` = 13[0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 8, `updated_at` = '2011-04-08 19:20:22' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 125ms (DB: 4) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:26) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating` = '4.87', `updated_at` = '2011-04-08 19:20:26' WHERE `id` = 13[0m
+  [4;36;1mPicture Update (16.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 9, `updated_at` = '2011-04-08 19:20:26' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 213ms (DB: 18) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:26) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 81, `updated_at` = '2011-04-08 19:20:26' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 799ms (View: 43, DB: 4) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:28) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `rating` = '4.88', `updated_at` = '2011-04-08 19:20:28' WHERE `id` = 13[0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 10, `updated_at` = '2011-04-08 19:20:28' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 130ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:29) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 82, `updated_at` = '2011-04-08 19:20:29' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 242ms (View: 117, DB: 4) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:30) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (0.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating` = '4.89', `updated_at` = '2011-04-08 19:20:30' WHERE `id` = 13[0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 11, `updated_at` = '2011-04-08 19:20:30' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 384ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:31) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (15.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 83, `updated_at` = '2011-04-08 19:20:31' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 219ms (View: 95, DB: 18) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:33) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 12, `updated_at` = '2011-04-08 19:20:33' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 78ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:33) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (0.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (0.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 84, `updated_at` = '2011-04-08 19:20:33' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 244ms (View: 92, DB: 1) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:35) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (0.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 13, `updated_at` = '2011-04-08 19:20:35' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 108ms (DB: 1) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:39) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 85, `updated_at` = '2011-04-08 19:20:39' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 461ms (View: 223, DB: 4) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:42) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 14, `updated_at` = '2011-04-08 19:20:42' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 103ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:42) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (56.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 86, `updated_at` = '2011-04-08 19:20:42' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 339ms (View: 50, DB: 61) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:45) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 15, `updated_at` = '2011-04-08 19:20:45' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 115ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:46) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 87, `updated_at` = '2011-04-08 19:20:46' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (0.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 208ms (View: 89, DB: 3) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:47) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 16, `updated_at` = '2011-04-08 19:20:47' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 114ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:47) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 88, `updated_at` = '2011-04-08 19:20:48' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 357ms (View: 49, DB: 5) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:49) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 17, `updated_at` = '2011-04-08 19:20:49' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 91ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:52) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (16.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 89, `updated_at` = '2011-04-08 19:20:52' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 397ms (View: 41, DB: 21) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:57) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 18, `updated_at` = '2011-04-08 19:20:57' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 99ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:20:57) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (11.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 90, `updated_at` = '2011-04-08 19:20:57' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 189ms (View: 40, DB: 15) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:20:59) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (0.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 19, `updated_at` = '2011-04-08 19:20:59' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 131ms (DB: 1) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:00) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (14.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 91, `updated_at` = '2011-04-08 19:21:00' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (3.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 172ms (View: 42, DB: 19) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:21:02) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 20, `updated_at` = '2011-04-08 19:21:02' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 90ms (DB: 4) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:02) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 92, `updated_at` = '2011-04-08 19:21:02' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 169ms (View: 39, DB: 6) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:21:06) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 21, `updated_at` = '2011-04-08 19:21:06' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 104ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:09) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (0.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 93, `updated_at` = '2011-04-08 19:21:09' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 135ms (View: 38, DB: 4) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:21:11) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (0.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 22, `updated_at` = '2011-04-08 19:21:11' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 88ms (DB: 1) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:11) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (12.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 94, `updated_at` = '2011-04-08 19:21:11' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (76.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 262ms (View: 62, DB: 90) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:21:12) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 23, `updated_at` = '2011-04-08 19:21:12' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 91ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:14) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (24.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 95, `updated_at` = '2011-04-08 19:21:14' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 232ms (View: 57, DB: 27) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:21:15) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 24, `updated_at` = '2011-04-08 19:21:15' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 99ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:15) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 96, `updated_at` = '2011-04-08 19:21:15' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 147ms (View: 40, DB: 5) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:21:16) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 25, `updated_at` = '2011-04-08 19:21:16' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 105ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:18) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 97, `updated_at` = '2011-04-08 19:21:18' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (4.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 172ms (View: 49, DB: 6) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:21:20) [GET]
+  Parameters: {"r"=>"4", "id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating` = '4.85', `updated_at` = '2011-04-08 19:21:20' WHERE `id` = 13[0m
+  [4;35;1mPicture Update (0.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 26, `updated_at` = '2011-04-08 19:21:20' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 186ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=4]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:22) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 98, `updated_at` = '2011-04-08 19:21:22' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (0.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 133ms (View: 43, DB: 3) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:21:24) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (0.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 27, `updated_at` = '2011-04-08 19:21:24' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 99ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:25) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 99, `updated_at` = '2011-04-08 19:21:26' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 189ms (View: 43, DB: 5) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:21:27) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (0.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 28, `updated_at` = '2011-04-08 19:21:27' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 81ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:28) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 100, `updated_at` = '2011-04-08 19:21:28' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 182ms (View: 53, DB: 5) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-08 23:21:29) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 29, `updated_at` = '2011-04-08 19:21:29' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 102ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-08 23:21:30) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 101, `updated_at` = '2011-04-08 19:21:30' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 179ms (View: 50, DB: 4) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-08 23:23:57) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE="}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (14.0ms)
+Completed in 46ms (View: 27, DB: 1) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-08 23:24:01) [POST]
+  Parameters: {"authenticity_token"=>"jlUvxYasZSVU5KDtD3kf/+hCzswkj9eAvpWhOQDJmKE=", "search_info"=>{"name"=>"dima"}, "commit"=>"Search"}
+
+ArgumentError (wrong # of arguments(1 for 0)):
+  app/controllers/home_controller.rb:38:in `initialize'
+  app/controllers/home_controller.rb:38:in `new'
+  app/controllers/home_controller.rb:38:in `search'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  script\server:3
+
+Rendered rescues/_trace (91.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-09 13:46:00) [GET]
+  [4;35;1mPicture Load (432.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (4.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (48.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (129.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (15.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (11.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (10.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (6.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_categories (19.0ms)
+Completed in 1259ms (View: 541, DB: 486) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 13:46:30) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (3.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (37.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 102, `updated_at` = '2011-04-09 09:46:30' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (79.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 505ms (View: 177, DB: 121) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-09 13:46:34) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (0.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 30, `updated_at` = '2011-04-09 09:46:34' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 115ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 13:46:34) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 103, `updated_at` = '2011-04-09 09:46:34' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 277ms (View: 62, DB: 4) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-09 13:46:35) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 31, `updated_at` = '2011-04-09 09:46:35' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 177ms (DB: 4) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 13:46:35) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 104, `updated_at` = '2011-04-09 09:46:36' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 269ms (View: 113, DB: 5) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-09 13:46:40) [GET]
+  Parameters: {"r"=>"1", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (88.0ms)[0m   [0mUPDATE `pictures` SET `rating` = '4.72', `updated_at` = '2011-04-09 09:46:40' WHERE `id` = 13[0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `rating_count` = 32, `updated_at` = '2011-04-09 09:46:40' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 326ms (DB: 91) | 302 Found [http://localhost/home/add_rating/13?r=1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 13:46:40) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (0.0ms)[0m   [0mUPDATE `pictures` SET `show_count` = 105, `updated_at` = '2011-04-09 09:46:40' WHERE `id` = 13[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 237ms (View: 65, DB: 2) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-09 13:46:45) [GET]
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (29.0ms)
+Rendered home/_picture (25.0ms)
+Rendered home/_picture (5.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (6.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (20.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_categories (18.0ms)
+Completed in 215ms (View: 182, DB: 3) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 13:46:48) [POST]
+  Parameters: {"authenticity_token"=>"eEZv136A7ECe6zm3Trei+g3swXltyucsVqxyE3Jlvas="}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Redirected to http://localhost:3000/home/search
+Completed in 16ms (DB: 2) | 302 Found [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 13:46:48) [GET]
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+Rendered home/_categories (28.0ms)
+Completed in 63ms (View: 45, DB: 2) | 200 OK [http://localhost/home/search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 13:48:03) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Redirected to http://localhost:3000/home/search
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 13:48:04) [GET]
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+Rendered home/_categories (17.0ms)
+Completed in 52ms (View: 36, DB: 1) | 200 OK [http://localhost/home/search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing ApplicationController#advanced_search (for 127.0.0.1 at 2011-04-09 13:48:50) [GET]
+
+SyntaxError (C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/home_controller.rb:49: syntax error, unexpected end-of-file
+):
+  app/controllers/home_controller.rb:380
+  app/controllers/home_controller.rb:380:in `load'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  script\server:3
+
+Rendered rescues/_trace (146.0ms)
+Rendered rescues/_request_and_response (27.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 13:49:41) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (16.0ms)
+Completed in 68ms (View: 43, DB: 1) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 13:49:48) [POST]
+  Parameters: {"authenticity_token"=>"eEZv136A7ECe6zm3Trei+g3swXltyucsVqxyE3Jlvas=", "name"=>"dimusik", "commit"=>"Search"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Redirected to http://localhost:3000/home/search?name=dimusik
+Completed in 42ms (DB: 1) | 302 Found [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 13:49:48) [GET]
+  Parameters: {"name"=>"dimusik"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+Rendered home/_categories (17.0ms)
+Completed in 43ms (View: 26, DB: 1) | 200 OK [http://localhost/home/search?name=dimusik]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 14:03:34) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (18.0ms)
+Completed in 51ms (View: 32, DB: 2) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 14:07:22) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (19.0ms)
+Completed in 64ms (View: 51, DB: 2) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 14:09:09) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (15.0ms)
+Completed in 60ms (View: 43, DB: 1) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 14:11:33) [POST]
+  Parameters: {"authenticity_token"=>"eEZv136A7ECe6zm3Trei+g3swXltyucsVqxyE3Jlvas=", "name"=>"", "commit"=>"Поиск"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Redirected to http://localhost:3000/home/search?name=
+Completed in 15ms (DB: 2) | 302 Found [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 14:11:33) [GET]
+  Parameters: {"name"=>""}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+Rendered home/_categories (16.0ms)
+Completed in 61ms (View: 48, DB: 1) | 200 OK [http://localhost/home/search?name=]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-09 14:54:50) [GET]
+  [4;35;1mPicture Load (8.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (3.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (60.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (15.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (9.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (22.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (8.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (5.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (21.0ms)
+Completed in 418ms (View: 296, DB: 14) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 14:54:56) [POST]
+  Parameters: {"authenticity_token"=>"r5aKsEt/pNzb5AZAjXLtCqLM+Y8PVRlrXn542ly+MAM="}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (47.0ms)
+Completed in 132ms (View: 84, DB: 1) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 14:54:58) [POST]
+  Parameters: {"authenticity_token"=>"r5aKsEt/pNzb5AZAjXLtCqLM+Y8PVRlrXn542ly+MAM=", "name"=>"", "commit"=>"Поиск"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Redirected to http://localhost:3000/home/search?name=
+Completed in 24ms (DB: 1) | 302 Found [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 14:54:58) [GET]
+  Parameters: {"name"=>""}
+  [4;35;1mTag Load (61.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name = 'Porsche') [0m
+
+NameError (undefined local variable or method `tags' for #<HomeController:0x798249>):
+  app/controllers/home_controller.rb:45:in `search'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  script\server:3
+
+Rendered rescues/_trace (135.0ms)
+Rendered rescues/_request_and_response (13.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 14:55:32) [GET]
+  Parameters: {"name"=>""}
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name = 'Porsche') [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.<<):
+  app/models/picture.rb:21:in `find_by_tags'
+  app/models/picture.rb:20:in `each'
+  app/models/picture.rb:20:in `find_by_tags'
+  app/controllers/home_controller.rb:45:in `search'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  script\server:3
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 14:56:32) [GET]
+  Parameters: {"name"=>""}
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name = 'Porsche') [0m
+
+NoMethodError (undefined method `pictures' for #<Class:0x17dbeaf>):
+  app/models/picture.rb:19:in `find_by_tags'
+  app/controllers/home_controller.rb:45:in `search'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  script\server:3
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (7.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 14:58:53) [GET]
+  Parameters: {"name"=>""}
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name = 'Porsche') [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` INNER JOIN `pictures_tags` ON `pictures`.id = `pictures_tags`.picture_id WHERE (`pictures_tags`.tag_id = 1 ) [0m
+Rendered home/_picture (76.0ms)
+Rendered home/_categories (17.0ms)
+Completed in 203ms (View: 139, DB: 4) | 200 OK [http://localhost/home/search?name=]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_category (for 127.0.0.1 at 2011-04-09 14:59:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/show_category
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.category_id = 2) [0m
+Rendered home/_picture (33.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (9.0ms)
+Rendered home/_categories (71.0ms)
+Completed in 223ms (View: 178, DB: 5) | 200 OK [http://localhost/home/show_category/2]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-09 14:59:06) [GET]
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (96.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (10.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (12.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (23.0ms)
+Completed in 275ms (View: 223, DB: 4) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 14:59:13) [POST]
+  Parameters: {"authenticity_token"=>"r5aKsEt/pNzb5AZAjXLtCqLM+Y8PVRlrXn542ly+MAM="}
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (17.0ms)
+Completed in 82ms (View: 55, DB: 2) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 14:59:15) [POST]
+  Parameters: {"authenticity_token"=>"r5aKsEt/pNzb5AZAjXLtCqLM+Y8PVRlrXn542ly+MAM=", "name"=>"", "commit"=>"Поиск"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Redirected to http://localhost:3000/home/search?name=
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 14:59:15) [GET]
+  Parameters: {"name"=>""}
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name = 'Porsche') [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` INNER JOIN `pictures_tags` ON `pictures`.id = `pictures_tags`.picture_id WHERE (`pictures_tags`.tag_id = 1 ) [0m
+Rendered home/_picture (33.0ms)
+Rendered home/_categories (15.0ms)
+Completed in 134ms (View: 74, DB: 4) | 200 OK [http://localhost/home/search?name=]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 15:00:11) [GET]
+  Parameters: {"name"=>""}
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name = 'Смешные картинки') [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` INNER JOIN `pictures_tags` ON `pictures`.id = `pictures_tags`.picture_id WHERE (`pictures_tags`.tag_id = 5 ) [0m
+Rendered home/_picture (54.0ms)
+Rendered home/_categories (16.0ms)
+Completed in 180ms (View: 102, DB: 5) | 200 OK [http://localhost/home/search?name=]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 15:16:46) [GET]
+  Parameters: {"name"=>""}
+  [4;35;1mTag Load (3.0ms)[0m   [0mSELECT * FROM `tags` WHERE (name = 'Смешные картинки') [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` INNER JOIN `pictures_tags` ON `pictures`.id = `pictures_tags`.picture_id WHERE (`pictures_tags`.tag_id = 5 ) [0m
+Rendered home/_picture (30.0ms)
+Rendered home/_categories (19.0ms)
+Completed in 148ms (View: 73, DB: 5) | 200 OK [http://localhost/home/search?name=]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-09 15:53:27) [GET]
+  [4;35;1mPicture Load (437.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;36;1mPicture Load (5.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;35;1mCategory Load (15.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (101.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (15.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (9.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (8.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (5.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_categories (20.0ms)
+Completed in 1065ms (View: 423, DB: 459) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 15:53:31) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (130.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 106, `updated_at` = '2011-04-09 11:53:31' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (4.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 515ms (View: 138, DB: 136) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-09 15:53:35) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (26.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 33, `updated_at` = '2011-04-09 11:53:35' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 154ms (DB: 27) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 15:53:35) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (2.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 107, `updated_at` = '2011-04-09 11:53:35' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 223ms (View: 68, DB: 5) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-09 15:53:39) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (2.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (0.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 34, `updated_at` = '2011-04-09 11:53:39' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 172ms (DB: 2) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 15:53:39) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (1.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 108, `updated_at` = '2011-04-09 11:53:39' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 268ms (View: 125, DB: 5) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-09 15:53:41) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 35, `updated_at` = '2011-04-09 11:53:41' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 132ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 15:53:41) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 109, `updated_at` = '2011-04-09 11:53:41' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 198ms (View: 75, DB: 3) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-09 15:53:43) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (0.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 36, `updated_at` = '2011-04-09 11:53:43' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 93ms (DB: 1) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 15:53:43) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 110, `updated_at` = '2011-04-09 11:53:43' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 190ms (View: 60, DB: 3) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-09 15:53:44) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (1.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 37, `updated_at` = '2011-04-09 11:53:44' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 112ms (DB: 3) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 15:53:48) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 111, `updated_at` = '2011-04-09 11:53:48' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 267ms (View: 46, DB: 4) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#add_rating (for 127.0.0.1 at 2011-04-09 15:53:49) [GET]
+  Parameters: {"r"=>"5", "id"=>"13"}
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;35;1mPicture Update (2.0ms)[0m   [0mUPDATE `pictures` SET `rating_count` = 38, `updated_at` = '2011-04-09 11:53:49' WHERE `id` = 13[0m
+Redirected to http://localhost:3000/home/show_picture/13
+Completed in 207ms (DB: 4) | 302 Found [http://localhost/home/add_rating/13?r=5]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#show_picture (for 127.0.0.1 at 2011-04-09 15:53:50) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mPicture Load (1.0ms)[0m   [0mSELECT * FROM `pictures` WHERE (`pictures`.`id` = 13) [0m
+  [4;36;1mPicture Update (0.0ms)[0m   [0;1mUPDATE `pictures` SET `show_count` = 112, `updated_at` = '2011-04-09 11:53:50' WHERE `id` = 13[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/show_picture_layout
+Rendering home/show_picture
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT * FROM `tags` INNER JOIN `pictures_tags` ON `tags`.id = `pictures_tags`.tag_id WHERE (`pictures_tags`.picture_id = 13 ) [0m
+Completed in 149ms (View: 45, DB: 3) | 200 OK [http://localhost/home/show_picture/13]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2011-04-09 16:00:47) [GET]
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 8[0m
+  [4;35;1mPicture Load (2.0ms)[0m   [0mSELECT * FROM `pictures` ORDER BY rating DESC LIMIT 12[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered home/_picture (28.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (5.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (4.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (1.0ms)
+Rendered home/_picture (34.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (3.0ms)
+Rendered home/_picture (5.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_picture (2.0ms)
+Rendered home/_categories (15.0ms)
+Completed in 191ms (View: 159, DB: 4) | 200 OK [http://localhost/home]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 16:00:49) [POST]
+  Parameters: {"authenticity_token"=>"MPf+ts7njtG4pBgbmzDNHM4xwDAtMYQqs1IbmgTuJaA="}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/advanced_search
+Rendered home/_categories (24.0ms)
+Completed in 74ms (View: 60, DB: 2) | 200 OK [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#advanced_search (for 127.0.0.1 at 2011-04-09 16:00:57) [POST]
+  Parameters: {"authenticity_token"=>"MPf+ts7njtG4pBgbmzDNHM4xwDAtMYQqs1IbmgTuJaA=", "name"=>"", "theme"=>"funky", "commit"=>"Поиск"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Redirected to http://localhost:3000/home/search?name=
+Completed in 17ms (DB: 2) | 302 Found [http://localhost/home/advanced_search]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at C:/Program Files/NetBeans 6.9.1/ruby/jruby-1.5.1/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/middleware_stack.rb:72)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/Users/Gusev Dmitrii/Documents/NetBeansProjects/memorails/app/controllers/application_controller.rb:6)
+
+
+Processing HomeController#search (for 127.0.0.1 at 2011-04-09 16:00:58) [GET]
+  Parameters: {"name"=>""}
+  [4;36;1mTag Load (13.0ms)[0m   [0;1mSELECT * FROM `tags` WHERE (name = 'Смешные картинки') [0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/home
+Rendering home/search
+  [4;36;1mPicture Load (1.0ms)[0m   [0;1mSELECT * FROM `pictures` INNER JOIN `pictures_tags` ON `pictures`.id = `pictures_tags`.picture_id WHERE (`pictures_tags`.tag_id = 5 ) [0m
+Rendered home/_picture (25.0ms)
+Rendered home/_categories (15.0ms)
+Completed in 153ms (View: 78, DB: 16) | 200 OK [http://localhost/home/search?name=]
