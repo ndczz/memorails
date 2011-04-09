@@ -1,0 +1,11 @@
+<table id="auth">
+  <tr>
+    <%  if @user %>
+      <td><%=  @user.login %></td>
+      <td><%= link_to "Выйти", :controller => 'auth', :action => 'logout' %></td>
+    <%  else %>
+      <td><%= link_to "Войти", :controller => 'auth', :action => 'index' %></td>
+      <td><%= link_to "Регистрация", :controller => 'auth', :action => 'advanced_search' %></td>
+    <%  end %>
+  </tr>
+</table>

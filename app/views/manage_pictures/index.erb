@@ -1,26 +1,26 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
 <h1>New picture</h1>
-
-
 
 <% form_for(@picture) do |f| %>
   <%= f.error_messages %>
 
-
-
   <p>
-    <%= f.label :name rescue nil%><br />
+    <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :url rescue nil%><br />
+    <%= f.label :url %><br />
     <%= f.text_field :url %>
   </p>
   <p>
-    <%= f.label :rating rescue nil%><br />
+    <%= f.label :rating %><br />
     <%= f.text_field :rating %>
   </p>
   <p>
-    <%= f.label :user_id rescue nil%><br />
+    <%= f.label :user_id %><br />
     <%= f.text_field :user_id %>
   </p>
   <p>
@@ -28,4 +28,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Back', :controller => "home", :action => "index" %>
+<%= link_to 'Back', pictures_path %>
+<%= "index" %>
