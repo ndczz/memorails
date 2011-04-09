@@ -6,7 +6,7 @@ class AuthController < ApplicationController
       if user.empty?
         flash.now[:notice] = "Invalid user or password!"
       else
-        session[:user_id] = user.id
+        session[:user_id] = user[0].id
         redirect_to(:controller => 'home')
       end
     end

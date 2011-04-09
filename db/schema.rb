@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20110408162402) do
     t.string   "name"
     t.string   "url"
     t.decimal  "rating",       :precision => 3, :scale => 2, :default => 0.0
-    t.integer  "user_id",                                                     :null => false
+    t.integer  "user_id",                                    :default => 0,   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(:version => 20110408162402) do
   add_index "pictures", ["category_id"], :name => "picture_categories"
   add_index "pictures", ["category_id"], :name => "picture_category"
   add_index "pictures", ["user_id"], :name => "picture_users"
+
+  create_table "pictures_tags", :force => true do |t|
+    t.integer "picture_id", :limit => 11, :default => 0, :null => false
+    t.integer "tag_id",     :limit => 11, :default => 0, :null => false
+  end
+
+  add_index "pictures_tags", ["picture_id"], :name => "fk_pictures_tags_pictures"
+  add_index "pictures_tags", ["tag_id"], :name => "fk_pictures_tags_tags"
 
   create_table "tags", :force => true do |t|
     t.string   "name"

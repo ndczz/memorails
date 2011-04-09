@@ -1,3 +1,5 @@
+
+<% if !session[:user_id].nil? %>
 <p>
   <b>Login:</b>
   <%=h @user.login %>
@@ -12,6 +14,10 @@
   <b>Email:</b>
   <%=h @user.email %>
 </p>
+<%else%>
+<% if User.find_all_by %>
+
+<%end%>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
