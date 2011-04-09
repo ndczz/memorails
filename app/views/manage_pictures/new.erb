@@ -1,0 +1,30 @@
+
+<h1>New picture</h1>
+<body alignment ="center">
+<% form_for(@picture) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :rating %><br />
+    <%= f.text_field :rating %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+
+<% end %>
+</body>
+<%= link_to 'Back', pictures_path %>
+<%= "index" %>

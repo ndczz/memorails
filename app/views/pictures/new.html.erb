@@ -1,22 +1,26 @@
 <h1>New picture</h1>
 
-<% form_for(@picture) do |f| %>
+
+
+<% form_for(Picture.new) do |f| %>
   <%= f.error_messages %>
 
+
+
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name rescue nil%><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :url %><br />
+    <%= f.label :url rescue nil%><br />
     <%= f.text_field :url %>
   </p>
   <p>
-    <%= f.label :rating %><br />
+    <%= f.label :rating rescue nil%><br />
     <%= f.text_field :rating %>
   </p>
   <p>
-    <%= f.label :user_id %><br />
+    <%= f.label :user_id rescue nil%><br />
     <%= f.text_field :user_id %>
   </p>
   <p>
