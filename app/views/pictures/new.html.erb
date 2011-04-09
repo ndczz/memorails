@@ -2,7 +2,7 @@
 
 
 
-<% form_for(Picture.new) do |f| %>
+<% form_for(@picture) do |f| %>
   <%= f.error_messages %>
 
 
@@ -28,4 +28,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Back', pictures_path %>
+<%= link_to 'Back', :controller => "home", :action => "index" %>
