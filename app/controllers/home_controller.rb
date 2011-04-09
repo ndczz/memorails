@@ -3,7 +3,10 @@ class HomeController < ApplicationController
     @most_popular_pics = Picture.find_most_popular
     @new_pics = Picture.find_new
     @categories = Category.find_all_categories
-    #@user = User.find(session[:user_id])
+    id = session[:user_id]
+    if id
+      @user = User.find(id)
+    end
   end
 
   def show_category
