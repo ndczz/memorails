@@ -3,7 +3,7 @@ background: #C0C0C0;
 padding-top:10px;
 padding-bottom:10px;
 border-bottom:2px solid;
-font: 50px arial, sans-serif;
+font: 30px arial, sans-serif;
 color: #3366CC;
 text-align:left;
 }
@@ -13,7 +13,7 @@ width: 100%;
 background: #C0C0C0;
 padding-bottom:10px;
 border-bottom:2px solid;
-font: 50px arial, sans-serif;
+font: 30px arial, sans-serif;
 color: #3366CC;
 text-align:left;
 }
@@ -106,8 +106,9 @@ text-align:left;
 }
 
 #auth{
+width:300px;
 font: 20px arial, sans-serif, bold;
-text-align:left;
+text-align:right;
 display:inline;
 }
 
