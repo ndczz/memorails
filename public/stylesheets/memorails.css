@@ -7,6 +7,26 @@ font: 50px arial, sans-serif;
 color: #3366CC;
 text-align:left;
 }
+
+#banner_table{
+width: 100%;
+background: #C0C0C0;
+padding-bottom:10px;
+border-bottom:2px solid;
+font: 50px arial, sans-serif;
+color: #3366CC;
+text-align:left;
+}
+
+#search_line form, #store form div{
+    display:inline;
+}
+
+#search{
+    width: 60%;
+    margin-left: 10%;
+}
+
 #bannerimg{
 float:left;
 }
@@ -85,6 +105,12 @@ font: 20px arial, sans-serif, bold;
 text-align:left;
 }
 
+#auth{
+font: 20px arial, sans-serif, bold;
+text-align:left;
+display:inline;
+}
+
 #category{
     padding-left:40px;
     padding-right:10px;
@@ -92,11 +118,3 @@ text-align:left;
     padding-bottom:10px;
 }
 
-#search_line form, #store form div{
-    display:inline;
-}
-
-#search{
-    width: 60%;
-    margin-left: 10%;
-}
