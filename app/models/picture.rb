@@ -14,4 +14,8 @@ class Picture < ActiveRecord::Base
   def self.find_by_category_id(id)
     find(:all, :conditions => ['category_id = ?', id], :order=> "rating DESC")
   end
+
+  def self.find_by_tags(tags)
+    tags[0].pictures
+  end
 end

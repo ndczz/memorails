@@ -1,0 +1,30 @@
+<div>
+  <%form_tag do%>
+    <fieldset>
+      <legend>Расширенный поиск</legend>
+
+      <label for="name">Строка поиска:</label>
+      <%=text_field_tag:name, params[:name]%>
+
+    </fieldset>
+    <fieldset>
+      <legend>Параметры изображения</legend>
+
+      <label for="name">Строка поиска:</label>
+      <%=text_field_tag:name, params[:name]%>
+
+      <div class="form_row">
+          <label for="theme">Theme:</label>
+          <br><%= radio_button_tag 'theme', 'plain', true %> Plain
+          <br><%= radio_button_tag 'theme', 'desert' %> Desert
+          <br><%= radio_button_tag 'theme', 'green' %> Green
+          <br><%= radio_button_tag 'theme', 'corporate' %> Corporate
+          <br><%= radio_button_tag 'theme', 'funky' %> Funky
+      </div>
+
+    </fieldset>
+
+    <%=submit_tag "Поиск" %>
+
+  <%end%>
+</div>

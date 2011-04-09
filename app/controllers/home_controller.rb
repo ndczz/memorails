@@ -33,4 +33,27 @@ class HomeController < ApplicationController
 
     redirect_to :action=> 'show_picture', :id => @picture
   end
+
+  def search
+    #@name = params[:name]
+    @search_info = SearchInfo.new
+    @search_info.search_str=("Porsche 911")
+    @search_info.width=(100)
+    @search_info.height=(100)
+
+    @strs = @search_info.search_str.split(",")
+
+    @tags = Tag.find_by_name("Смешные картинки")
+    @pictures = Picture.find_by_tags(@tags)
+
+    @categories = Category.find_all_categories
+  end
+
+  def advanced_search
+    @categories = Category.find_all_categories
+    name = params[:name]
+    if name
+      redirect_to(:action=> "search", :name => name)
+    end
+  end
 end

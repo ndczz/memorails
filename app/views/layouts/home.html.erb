@@ -6,19 +6,35 @@
 <%=stylesheet_link_tag "memorails",:media=> "all" %>
 </head>
   <body id="store">
-
-    <div id="banner">
-      <%= link_to image_tag("memorails.jpg"), :action => 'index' %>
-
-      <div id="banner_text"> Just hosting it...</div>
-
     
-      <div id="search_line">
-        <input id="search" type="text" name="serch"/>
-        <%=button_to "Search",:action=>:search%>
-        <%=button_to "Advanced Search",:action=>:advanced_search%>
-      </div>
-    </div>
+    <%
+      id = session[:user_id]
+      if id
+        @user = User.find(id)
+      end
+    %>
+    <table id="banner_table">
+      <tr>
+        <td>
+          <%= link_to image_tag("memorails.jpg"), :action => 'index' %>
+        </td>
+        <td>
+          Just hosting it...
+        </td>
+        <td>
+          <%=render(:partial=> "auth",:object=>@user)%>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div id="search_line">
+            <input id="search" type="text" name="serch"/>
+            <%=button_to "Search",:action=>:search%>
+            <%=button_to "Advanced Search",:action=>:advanced_search%>
+          </div>
+        </td>
+      </tr>
+    </table>
 
     <div id="columns">
 
